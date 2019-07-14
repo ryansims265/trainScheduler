@@ -21,10 +21,10 @@
         <table class="table">
                 <thead>
                   <tr>
+                    <th scope="col">Train Name</th>
                     <th scope="col">Destination</th>
-                    <th scope="col">Departure Time</th>
-                    <th scope="col">Arrival Time</th>
-                    <th scope="col">Length</th>
+                    <th scope="col">First Train</th>
+                    <th scope="col">Frquency</th>
                   </tr>
                 </thead>
                 <tbody id="table">
@@ -39,26 +39,26 @@
         <div class="container">
             <form>
                 <header id="section-header">
-                    <p>Add Train</p>
+                    <h2>Add new Trains Here: </h2>
                 </header>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="inputemployer-name">Train Name</label>
-                        <input type="p" class="form-control" id="inputName" placeholder="Jane Doe">
+                        <label for="input-Name">Train Name</label>
+                        <input type="p" class="form-control" id="input-Name" placeholder="Name">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="inputRole">Destination</label>
-                        <input type="p" class="form-control" id="inputRole" placeholder="CEO">
+                        <label for="input-Dest">Destination</label>
+                        <input type="p" class="form-control" id="input-Dest" placeholder="Destination">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="input-startDate">Start Date (MM/DD/YYYY)</label>
-                        <input type="p" class="form-control" id="inputStart" placeholder="01/08/1989">
+                        <label for="input-Start">First Train Time (24 Hour Standard)</label>
+                        <input type="p" class="form-control" id="input-Start" placeholder="HH/MM">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="input-rate">Total Time</labelpu>
-                        <input type="p" class="form-control" id="inputRate" placeholder="200000">
+                        <label for="input-Freq">Frequency (Min)</labelpu>
+                        <input type="p" class="form-control" id="input-Freq" placeholder="Minutes of Frequency">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>

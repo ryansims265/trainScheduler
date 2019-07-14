@@ -23,28 +23,28 @@ var firebaseConfig = {
     event.preventDefault();
     console.log("Submitted");
 //Create variables for each of the user submission areas 
-    var name = $("#inputName").val().trim();
-    var role = $("#inputRole").val().trim();
-    var start = $("#inputStart").val().trim();
-    var rate = $("#inputRate").val().trim();
+    var name = $("#input-Name").val().trim();
+    var destination = $("#input-Dest").val().trim();
+    var start = $("#input-Start").val().trim();
+    var freq = $("#input-Freq").val().trim();
     console.log(name);
-    console.log(role);
+    console.log(destination);
     console.log(start);
-    console.log(rate);
+    console.log(freq);
 
     //Then push the user data values to the database
     database.ref().push({
       name: name,
-      role: role,
+      destination: destination,
       start: start,
-      rate: rate
+      freq: freq
     });
 //Clear the input boxes after submission 
 
-$("#inputName").val("");
-$("#inputRole").val("");
-$("#inputStart").val("");
-$("#inputRate").val("");
+$("#input-Name").val("");
+$("#input-Dest").val("");
+$("#input-Start").val("");
+$("#input-Freq").val("");
 
 
     });
@@ -53,11 +53,11 @@ $("#inputRate").val("");
 //Next set up a snapshot so that it will update the DOM if the data changes at any time 
     database.ref().on("child_added", function(snapshot) {
       console.log(snapshot.val().name);
-      console.log(snapshot.val().role);
+      console.log(snapshot.val().destination);
       console.log(snapshot.val().start);
-      console.log(snapshot.val().rate);
+      console.log(snapshot.val().freq);
       // Change the HTML
-$("#table").append("<tr><td>" + snapshot.val().name + "</td><td>" + snapshot.val().role + "</td><td>" + snapshot.val().start + "</td><td>" + snapshot.val().rate) + "</td></tr>";
+$("#table").append("<tr><td>" + snapshot.val().name + "</td><td>" + snapshot.val().destination + "</td><td>" + snapshot.val().start + "</td><td>" + snapshot.val().freq) + "</td></tr>";
 //Setup error handling 
     }, function(errorObject) {
       console.log("The read failed: " + errorObject.code);
