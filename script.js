@@ -74,11 +74,9 @@ database.ref().on("child_added", function (snapshot) {
   console.log(snapshot.val().platform);
 
   // Change the HTML
-  $("#table").append("<tr><td>" + snapshot.val().number + "</td><td>" + snapshot.val().Line + "</td><td>" + snapshot.val().destination + "</td><td>" + snapshot.val().start + "</td><td>" + snapshot.val().freq + "</td><td>" + snapshot.val().platform + "</td></tr>");
+  $("#table").append("<tr><td>" + snapshot.val().number + "</td><td>" + snapshot.val().line + "</td><td>" + snapshot.val().destination + "</td><td>" + snapshot.val().start + "</td><td>" + snapshot.val().freq + "</td><td>" + snapshot.val().nextarrival + "</td><td>" + snapshot.val().timetoarrive + "</td><td>" + snapshot.val().platform + "</td></tr>");
   //Setup error handling 
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
 
-var timenow = (today.getMonth() + 1) + "-" + today.getDate();
-$("#current-time-here").text("The Current Time is: " + timenow);
