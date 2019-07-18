@@ -2,6 +2,14 @@
 console.log("Waiting for Submission");
 
 
+setInterval(function(){
+  var currentTime = moment().format("HH:MM A");
+  $("#currentTime").html("The Current Time is: " + currentTime);
+}, 1000);
+
+// var today = new Date();
+// var currenttime = today.getHours() + ":" + today.getMinutes();
+// $("#timer").html("Time until next Train: " + currenttime);
 
 var firebaseConfig = {
     apiKey: "AIzaSyA2dI2zWOEsFCpHiCDs5T4200ax98VJRb8",
@@ -31,13 +39,16 @@ var firebaseConfig = {
     console.log(destination);
     console.log(start);
     console.log(freq);
+    var newtime = Data.parse(start);
+    console.log(newtime);
 
     //Then push the user data values to the database
     database.ref().push({
       name: name,
       destination: destination,
       start: start,
-      freq: freq
+      freq: freq,
+      currenttime: currenttime,
     });
 //Clear the input boxes after submission 
 
@@ -56,9 +67,15 @@ $("#input-Freq").val("");
       console.log(snapshot.val().destination);
       console.log(snapshot.val().start);
       console.log(snapshot.val().freq);
+      console.log(snapshot.val().currenttime);
       // Change the HTML
 $("#table").append("<tr><td>" + snapshot.val().name + "</td><td>" + snapshot.val().destination + "</td><td>" + snapshot.val().start + "</td><td>" + snapshot.val().freq) + "</td></tr>";
+
 //Setup error handling 
+
     }, function(errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
+
+   
+

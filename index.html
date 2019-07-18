@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js" async defer></script>        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     </head>
@@ -16,6 +16,7 @@
             <div class="row">
                 <h1>Here are today's Trains!</h1>
             </div>
+            <h4 id="currentTime"></h4>
         </div>
    
         <table class="table">
@@ -34,7 +35,9 @@
                 </tbody>
               </table>
             
-            
+            <div id="timer">
+
+            </div>
             
         <div class="container">
             <form>
