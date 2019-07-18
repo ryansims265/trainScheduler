@@ -15,17 +15,26 @@
         <div class="container justify-content-center">
             <div class="row">
                 <h1>Here are today's Trains!</h1>
+                
             </div>
+<<<<<<< HEAD
             <h4 id="currentTime"></h4>
+=======
+            <h2 id="current-time-here"></h2>
+>>>>>>> e8603b919ce42e815ac749fd9c55f61512176d7a
         </div>
    
         <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Train Name</th>
+                    <th scope="col">Train Number</th>
+                    <th scope="col">Line</th>
                     <th scope="col">Destination</th>
                     <th scope="col">First Train</th>
-                    <th scope="col">Frquency</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Time to Arrival</th>
+                    <th scope="col">Platform</th>
                   </tr>
                 </thead>
                 <tbody id="table">
@@ -46,10 +55,15 @@
                 </header>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="input-Name">Train Name</label>
-                        <input type="p" class="form-control" id="input-Name" placeholder="Name">
+                        <label for="input-Number">Train Number</label>
+                        <input type="p" class="form-control" id="input-Number" placeholder="Train Number">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="input-Line">Train Line</labelpu>
+                        <input type="p" class="form-control" id="input-Line" placeholder="Name of Line">
                     </div>
                 </div>
+                
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="input-Dest">Destination</label>
@@ -57,11 +71,15 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label for="input-Start">First Train Time (24 Hour Standard)</label>
-                        <input type="p" class="form-control" id="input-Start" placeholder="HH/MM">
+                        <input type="p" class="form-control" id="input-Start" placeholder="HH:MM">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="input-Freq">Frequency (Min)</labelpu>
                         <input type="p" class="form-control" id="input-Freq" placeholder="Minutes of Frequency">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="input-Platform">Platform</labelpu>
+                        <input type="p" class="form-control" id="input-Platform" placeholder="Platform of Train">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
