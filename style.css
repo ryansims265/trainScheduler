@@ -1,0 +1,24 @@
+* {
+	cursor: all-scroll;
+}
+body {
+	background: black;
+	color: rgba(21,171,195,1.0);
+	font-family: "Bitstream Vera Sans Mono", monospace;
+	
+}
+
+#submit-button{
+    background: black;
+	color: rgba(21,171,195,1.0);
+	font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+
+.table{
+    color: rgba(21,171,195,1.0);
+}
+
+#table{
+    color: rgba(21,171,195,1.0);
+}

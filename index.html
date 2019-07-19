@@ -13,10 +13,9 @@
     </head>
     <body>
         <div class="container justify-content-center">
-        <div class="container justify-content-center">
+        <div class="container justify-content-center" id="title">
             <div class="row">
-                <h1>Here are today's Trains!</h1>
-                
+                <h1>Flynn's Lightrail Schedule</h1>
             </div>
             <h4 id="currentTime"></h4>
         </div>
@@ -24,13 +23,12 @@
         <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Train Number</th>
+                    <th scope="col">Lightrail Number</th>
                     <th scope="col">Line</th>
                     <th scope="col">Destination</th>
-                    <th scope="col">First Train</th>
+                    <th scope="col">First Departure Time</th>
                     <th scope="col">Frequency</th>
-                    <th scope="col">Next Arrival</th>
-                    <th scope="col">Time to Arrival</th>
+                    <th scope="col">Minutes till Arrival</th>
                     <th scope="col">Platform</th>
                   </tr>
                 </thead>
@@ -46,17 +44,17 @@
             </div>
             
         <div class="container">
-            <form>
+            <form id="form"> 
                 <header id="section-header">
-                    <h2>Add new Trains Here: </h2>
+                    <h2>Add New Lightrails: </h2>
                 </header>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="input-Number">Train Number</label>
+                        <label for="input-Number">Lightrail Number</label>
                         <input type="p" class="form-control" id="input-Number" placeholder="Train Number">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="input-Line">Train Line</labelpu>
+                        <label for="input-Line">Lightrail Line</labelpu>
                         <input type="p" class="form-control" id="input-Line" placeholder="Name of Line">
                     </div>
                 </div>
@@ -67,7 +65,7 @@
                         <input type="p" class="form-control" id="input-Dest" placeholder="Destination">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="input-Start">First Train Time (24 Hour Standard)</label>
+                        <label for="input-Start">First Lightrail Time (24 Hour Standard)</label>
                         <input type="p" class="form-control" id="input-Start" placeholder="HH:MM">
                     </div>
                     <div class="form-group col-md-12">
